@@ -98,18 +98,40 @@ body {
 .news__item {
   max-width: 400px;
 }
+
+footer {
+  position: relative;
+  background-color: #f1d2bb;
+}
+.subscription__form {
+  transform: translateY(-50%);
+  background: #f2f1ed;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.custom-dark {
+  color: #1e364a;
+}
 // .clip {
 //   position: absolute;
 //   clip-path: polygon(0 97%, 100% 97%, 100% 100%, 0% 100%);
 // }
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+@media only screen and (min-width: 1024px) {
+  .subscription__form {
+    // background-position-x: 110%;
+    // background-size: 60%;
+  }
 }
-.footer__middle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@media only screen and (min-width: 768px) {
+  .subscription__form {
+    background-image: url(../../dist/images/top-view-fabric.png);
+    background-position-x: 130%;
+    background-size: 80%;
+  }
+  .icon__list {
+    border-left: 1px solid black !important;
+  }
+  .footer__logo {
+    border-right: 1px solid black !important;
+  }
 }
