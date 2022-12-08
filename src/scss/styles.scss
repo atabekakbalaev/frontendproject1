@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -28,12 +27,12 @@
 $enable-gradients: true;
 $enable-shadows: true;
 
-$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
 // Customize some defaults
 $body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
+$border-radius: 0.4rem;
 $success: #7952b3;
 
 // Required
@@ -46,32 +45,32 @@ $success: #7952b3;
 @import "~bootstrap/scss/reboot";
 
 @import "~bootstrap/scss/type";
-// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/images";
 @import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
-// @import "~bootstrap/scss/tables";
-// @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
-// @import "~bootstrap/scss/button-group";
-// @import "~bootstrap/scss/nav";
-// @import "~bootstrap/scss/navbar"; // Requires nav
-// @import "~bootstrap/scss/card";
-// @import "~bootstrap/scss/breadcrumb";
-// @import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar"; // Requires nav
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/accordion";
 // @import "~bootstrap/scss/pagination";
 // @import "~bootstrap/scss/badge";
-// @import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/alert";
 // @import "~bootstrap/scss/progress";
-// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/close";
 // @import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal"; // Requires transitions
 // @import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/popover";
-// @import "~bootstrap/scss/carousel";
-// @import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/offcanvas"; // Requires transitions
 // @import "~bootstrap/scss/placeholders";
 
@@ -81,13 +80,36 @@ $success: #7952b3;
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 
-
 //
 // Custom styles
 //
-
-@import "icon-list";
-
+// @import "icon-list";
 body {
-  padding: 1.5rem;
+  font-size: 1.125rem !important;
+}
+.header__wrapper {
+  background-color: #1e364a;
+}
+.news__section {
+  background-color: #1e364a;
+  background-image: linear-gradient(#2d1c12, #1e364a);
+  padding-bottom: 200px;
+}
+.news__item {
+  max-width: 400px;
+}
+// .clip {
+//   position: absolute;
+//   clip-path: polygon(0 97%, 100% 97%, 100% 100%, 0% 100%);
+// }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
